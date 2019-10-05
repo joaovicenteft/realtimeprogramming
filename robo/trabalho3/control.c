@@ -35,6 +35,23 @@ void writingFile(char *string, char *file) {
     fputs(string, fp);
 }
 
+void add_ut(char *string, int t) {
+
+    if (!t) {
+        strcat(string, " ");
+        strcat(string, "0");
+        strcat(string, " ");
+    } else if (t < 10) {
+        strcat(string, " ");
+        strcat(string, "1 0.628");
+        strcat(string, " ");
+    } else if (t >= 10) {
+        strcat(string, " ");
+        strcat(string, "1 -0.628");
+        strcat(string, " ");
+    }
+}
+
 void loopWriting(char *file, int loops,
             matrix *matrix_xt, matrix *matrix_identity) {
 
@@ -43,7 +60,7 @@ void loopWriting(char *file, int loops,
     char stringToBeWritten[10000];
     int i = 0;
 
-    while (i < loops) {
+    while (i <= loops) {
 
         definingUt(elementsOfMatrix_ut, i);
 
@@ -53,6 +70,13 @@ void loopWriting(char *file, int loops,
         matrix *matrixResponse_xt = matrix_multiply(matrix_xt, matrix_ut);
 
         matrix *matrix_yt = matrix_multiply(matrix_identity, matrixResponse_xt); // y(t)
+
+        char aux[100];
+        snprintf(aux, 50, "%d", i);
+        strcat(stringToBeWritten, aux);
+        strcat(stringToBeWritten, " ");
+
+        add_ut(stringToBeWritten, i);
 
         for (int k = 0; k < 3; k++) {
             char aux[100];
