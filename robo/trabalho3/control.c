@@ -7,7 +7,7 @@ void writingFile(char *string, char *file) {
     fputs(string, fp);
 }
 
-void loopWriting(char *file, int loops) {
+void loopWriting(char *file, int loops, double xc, double yc) {
 
     double elementsOfMatrix_xt[7];
     double elementsOfIdentity[9];
@@ -21,7 +21,7 @@ void loopWriting(char *file, int loops) {
     matrix_putValues(matrix_identity, elementsOfIdentity);
 
     matrix *(matrix_xt) = matrix_createMatrix("matrix_xt,", 3, 2);
-    insertElementsOfXt(1 , 1,elementsOfMatrix_xt);
+    insertElementsOfXt(xc, yc, elementsOfMatrix_xt);
     matrix_putValues(matrix_xt, elementsOfMatrix_xt);
 
     while (i <= loops) {

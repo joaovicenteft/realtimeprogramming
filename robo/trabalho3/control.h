@@ -11,6 +11,6 @@
 
 void writingFile(char *string, char *file);
 
-void loopWriting(char *file, int loops);
+void loopWriting(char *file, int loops, double xc, double yc);
 
 void identityMatrix(double *matrixNotIdentity);

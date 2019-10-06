@@ -5,5 +5,5 @@
 int main(int argc, char *argv[]) {
 
     matrix *matrix_xt, *matrix_identity;
-    loopWriting(argv[1], 20);
+    loopWriting(argv[1], 20, 0.5, 0.5);
 }
