@@ -220,3 +220,19 @@ matrix * matrix_invers(matrix * a)
         return d;
     }
 }
+
+void identityMatrix(double *matrixNotIdentity) {
+    int k = 1;
+
+    matrixNotIdentity[0] = 1;
+
+    for (int i = 1; i < 9; i++) {
+        if (k == 4) {
+            matrixNotIdentity[i] = 1;
+            k = 0;
+        } else {
+            matrixNotIdentity[i] = 0;
+        }
+        k++;
+    }
+}

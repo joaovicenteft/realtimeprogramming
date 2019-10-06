@@ -13,6 +13,7 @@ typedef struct matriz {
 
 }matrix;
 
+void identityMatrix(double *matrixNotIdentity);
 void matrix_putValues(matrix*d, double*putValues);
 matrix * matrix_createMatrix(char*nome,int lines,int columns);
 void matrix_printMatrix(matrix*d);
