@@ -1,9 +1,12 @@
 #include "stdio.h"
 #include "stdlib.h"
+#include "simulacao.h"
 #include "control.h"
 
 int main(int argc, char *argv[]) {
 
-    matrix *matrix_xt, *matrix_identity;
-    loopWriting(argv[1], 20, 0.5, 0.5);
+    // parâmetro1 = arquivo
+    // parâmetro2 = tempo
+    simulacao(argv[1], 20);
+
 }
