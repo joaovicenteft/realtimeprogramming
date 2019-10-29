@@ -3,7 +3,7 @@
 #include <string.h>
 #include <stdlib.h> 
 
-matrix* matrix_createMatrix(char*nome,int lines,int columns) {
+matrix * matrix_createMatrix(char*nome,int lines,int columns){
     matrix * d;
     d = malloc (sizeof (struct matriz));
     d->column=columns;
@@ -174,7 +174,6 @@ double pow(double base,double pot)
     }
     return result;
 }
-
 double matrix_determinant(matrix*a)
 {
     int j;
