@@ -53,6 +53,12 @@ void *tarefa1 (void*args){
             char aux[100];
             snprintf(aux, 50, "%f", bufferYf->matrix[i][0]);
             strcat(stringToBeWritten, aux);
+(int i = 0; i < 3; i++) {
+            char aux[100];
+            snprintf(aux, 50, "%f", bufferYf->matrix[i][0]);
+            strcat(stringToBeWritten, aux);
+            strcat(stringToBeWritten, "   ");
+        }
             strcat(stringToBeWritten, "   ");
         }
         strcat(stringToBeWritten,  "   ");
