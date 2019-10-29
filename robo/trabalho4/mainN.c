@@ -30,7 +30,6 @@ void writingFile(char *string, char *file) {
     fputs(string, fp);
 }
 
-
 void *tarefa1 (void*args){
     while(k<=MAX){
         sem_wait(&bufferUVazio);
@@ -49,11 +48,13 @@ void *tarefa1 (void*args){
         strcat(stringToBeWritten, aux);
         strcat(stringToBeWritten, "   ");
         add_ut(stringToBeWritten, k);
+        
         for (int i = 0; i < 3; i++) {
             char aux[100];
             snprintf(aux, 50, "%f", bufferYf->matrix[i][0]);
             strcat(stringToBeWritten, aux);
-(int i = 0; i < 3; i++) {
+        
+        for (int i = 0; i < 3; i++) {
             char aux[100];
             snprintf(aux, 50, "%f", bufferYf->matrix[i][0]);
             strcat(stringToBeWritten, aux);
