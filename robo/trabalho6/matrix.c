@@ -41,12 +41,12 @@ void matrix_printMatrix(matrix*d)
     return;
 }
 
-matrix * matrix_sum(matrix*a,matrix*b)
+matrix * matrix_sum(matrix*a, matrix*b)
 {
     int i, j;
     matrix * d;
     d->column=a->column;
-    d->line=b->line;
+    d->line=a->line;
     d = malloc (sizeof (struct matriz));
     if((a->column!=b->column)&&(a->line!=b->line)){
         printf("N possible do that, The matrix's have a diferent order!!\n");

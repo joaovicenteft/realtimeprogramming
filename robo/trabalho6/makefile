@@ -1,2 +1,2 @@
-makework: mainN.c matrix.c yf.c ut.c 
-	gcc -pthread mainN.c matrix.c ut.c yf.c -lm
+makework: main.c matrix.c blocos.c statistics.c
+	gcc -pthread main.c matrix.c statistics.c blocos.c -lm
